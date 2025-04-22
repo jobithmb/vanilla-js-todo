@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+    <div class="todo-app">
+
+        <div class="welcome-message">
+            <div class="welcome-message__icon">
+                <img src="images/evening.png" alt="evening">
+            </div>
+            <div class="welcome-message__group">
+                <h1 class="welcome-message__title">Welcome back, Stan!</h1>
+                <p class="welcome-message__summary">You've got <span class="count">0</span> tasks in the upcoming days.</p>
+            </div>
+        </div>
+
+        <form class="todo-form">
+            <div class="todo-form__group">
+                <select class="todo-form__select">
+                    <option value="shopping"> <i class="ri-shopping-basket-line"></i> Shopping</option>
+                    <option value="homework"> <i class="ri-booklet-line"></i> Homework</option>
+                    <option value="work"><i class="ri-suitcase-line"></i> Work</option>
+                </select>
+                <input class="todo-form__input" type="text" placeholder="What needs to be done?">
+            </div>
+            <textarea class="todo-form__input" placeholder="Description (optional)" rows="3"></textarea>
+            <button class="todo-form__button">
+                <i class="ri-add-line"></i>
+                Add Task
+            </button>
+        </form>
+
+        <ul class="todo-list">
+            <li class="todo-list__item">
+                <input class="todo-list__item-input" type="checkbox">
+                <div class="todo-list__item-group">
+                    <div class="todo-list__item-label">
+                        <label class="todo-list__item-category">Shopping</label>
+                        <div class="todo-list__item-title">Buy milk</div>
+                    </div>
+                    <p class="todo-list__item-description">Milk is the best drink in the world.</p>
+                </div>
+                <button class="todo-list__item-button todo-list__item-bottom--delete"><i class="ri-delete-bin-line"></i></button>
+            </li>
+            <li class="todo-list__item">
+                <input class="todo-list__item-input" type="checkbox">
+                <div class="todo-list__item-group">
+                    <div class="todo-list__item-label">
+                        <label class="todo-list__item-category">Shopping</label>
+                        <div class="todo-list__item-title">Buy milk</div>
+                    </div>
+                    <p class="todo-list__item-description">Milk is the best drink in the world.</p>
+                </div>
+                <button class="todo-list__item-button todo-list__item-bottom--delete"><i class="ri-delete-bin-line"></i></button>
+            </li>
+            <li class="todo-list__item">
+                <input class="todo-list__item-input" type="checkbox">
+                <div class="todo-list__item-group">
+                    <div class="todo-list__item-label">
+                        <label class="todo-list__item-category">Shopping</label>
+                        <div class="todo-list__item-title">Buy milk</div>
+                    </div>
+                    <p class="todo-list__item-description">Milk is the best drink in the world.</p>
+                </div>
+                <button class="todo-list__item-button todo-list__item-bottom--delete"><i class="ri-delete-bin-line"></i></button>
+            </li>
+            <li class="todo-list__item">
+                <input class="todo-list__item-input" type="checkbox">
+                <div class="todo-list__item-group">
+                    <div class="todo-list__item-label">
+                        <label class="todo-list__item-category">Shopping</label>
+                        <div class="todo-list__item-title">Buy milk</div>
+                    </div>
+                    <p class="todo-list__item-description">Milk is the best drink in the world.</p>
+                </div>
+                <button class="todo-list__item-button todo-list__item-bottom--delete"><i class="ri-delete-bin-line"></i></button>
+            </li>
+        </ul>
+    </div>
+    
+    <script src="scripts/app.js"></script>
+</body>
+</html>

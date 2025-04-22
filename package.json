@@ -1,0 +1,22 @@
+{
+  "name": "vanilla-js-todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jobithmb/vanilla-js-todo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jobithmb/vanilla-js-todo/issues"
+  },
+  "homepage": "https://github.com/jobithmb/vanilla-js-todo#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0"
+  }
+}

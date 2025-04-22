@@ -1,0 +1,15 @@
+@use "variables" as *;
+
+:root {
+    --primary-color: #{$primary-color};
+    --secondary-color: #{$secondary-color};
+
+    --background-color: #{$background-color};
+    --text-color: #{$text-color};
+    --text-color-light: #{$text-color-light};
+
+    --success-color: #{$success-color};
+    --danger-color: #{$danger-color};
+    --warning-color: #{$warning-color};
+    --info-color: #{$info-color};
+}

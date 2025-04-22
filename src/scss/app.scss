@@ -1,0 +1,238 @@
+@use "partials/variables" as *;
+@use "partials/theme";
+@use "partials/base";
+
+
+.todo-app {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5rem;
+    height: calc(100vh - 20rem);
+    max-width: 600px;
+    margin: 10rem auto;
+
+    .welcome-message {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+        width: 100%;
+
+        &__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        &__title {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        &__summary {
+            font-size: 1.6rem;
+
+            .count {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .todo-form {
+        padding: 0rem;
+        height: 5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        border: 1px solid transparent;
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.0);
+        border-radius: 1rem;
+        transition: all 0.3s ease-in-out;
+
+        &__group {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        &__select {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-size: 1.6rem;
+            color: var(--text-color-light);
+            border: 1px solid transparent;
+            background-color: transparent;
+            flex: 1;
+            transition: all 0.3s ease-in-out;
+            transition-delay: 0.2s;
+        }
+
+        &__input {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-size: 1.6rem;
+            color: var(--text-color-light);
+            border: 1px solid transparent;
+            background-color: transparent;
+            flex: 3;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+            transition-delay: 0.2s;
+
+            &::placeholder {
+                color: var(--text-color-light);
+            }
+        }
+
+        textarea {
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+            transition-delay: 0.4s;
+        }
+
+        &__button {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--secondary-color);
+            border-radius: 0.5rem;
+            font-size: 1.6rem;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            opacity: 0;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            transition-delay: 0.5s;
+        }
+
+        &:hover {
+            height: auto;
+            padding: 2rem;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+
+            .todo-form__input {
+                color: var(--text-color);
+                border: 1px solid var(--secondary-color);
+                background-color: var(--background-color);
+            }
+            
+            .todo-form__select {
+                color: var(--text-color);
+                border: 1px solid var(--secondary-color);
+                background-color: var(--background-color);
+            }
+
+            textarea {
+                opacity: 1;
+            }
+        
+            .todo-form__button {
+                opacity: 1;
+            }
+        }
+
+        
+    }
+
+    .todo-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        width: 100%;
+
+        &__item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+            background-color: #FFF;
+            padding: 1rem;
+
+            &-input {
+                border: 1px solid var(--secondary-color);
+                border-radius: 50%;
+                flex: 0.5;
+            }
+
+            &-group {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+                width: 100%;
+                flex: 5;
+            }
+
+            &-label {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 0.5rem;
+                width: 100%;
+            }
+
+            &-category {
+                font-size: 1rem;
+                background-color: aqua;
+                border-radius: 1rem;
+                padding: 0.2rem 0.5rem;
+            }
+
+            &-title {
+                font-size: 1.4rem;
+            }
+
+            &-description {
+                font-size: 1.2rem;
+            }
+
+            &-button {
+                width: 5rem;
+                height: 4rem;
+                border: none;
+                border-radius: 0.5rem;
+                font-size: 1.6rem;
+                color: var(--text-color-light);
+                background-color: transparent;
+                flex: 0.5;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+    }
+}
