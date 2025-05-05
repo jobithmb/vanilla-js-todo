@@ -183,6 +183,13 @@ body {
   background-color: #FFF;
   padding: 1rem;
 }
+.todo-app .todo-list__item--completed {
+  opacity: 0.5;
+}
+.todo-app .todo-list__item--completed .todo-list__item-title {
+  color: var(--success-color);
+  text-decoration: line-through;
+}
 .todo-app .todo-list__item-input {
   border: 1px solid var(--secondary-color);
   border-radius: 50%;
@@ -205,10 +212,10 @@ body {
   width: 100%;
 }
 .todo-app .todo-list__item-category {
-  font-size: 1rem;
-  background-color: aqua;
-  border-radius: 1rem;
   padding: 0.2rem 0.5rem;
+}
+.todo-app .todo-list__item-category i {
+  font-size: 1.6rem;
 }
 .todo-app .todo-list__item-title {
   font-size: 1.4rem;
